@@ -1,0 +1,4 @@
+abrir cmd
+
+- cd quis/windows64
+- run
