@@ -9,3 +9,429 @@
 
 
 ----QUIT----(22 March 2025 00:39:18) CuisUniversity-6350.image priorSource: 6644035!
+
+----STARTUP---- (23 March 2025 10:55:06) as C:\Users\admin\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.image!
+
+
+ObjectBuilder create: #Pepe
+	collaboratorNames: ''
+	in: 'Ejercicio 2'
+	!
+
+!classDefinition: #Pepe category: #'Ejercicio 2' stamp: 'MMP 3/23/2025 11:01:17'!
+DenotativeObject subclass: #Pepe
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 2'!
+
+!classDefinition: 'Pepe class' category: #'Ejercicio 2' stamp: 'MMP 3/23/2025 11:01:17'!
+Pepe class
+	instanceVariableNames: ''!
+
+!classRemoval: #Pepe stamp: 'MMP 3/23/2025 11:07:24'!
+DenotativeObject subclass: #Pepe
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 2'!
+
+ObjectBuilder create: #Pepe
+	collaboratorNames: ''
+	in: 'Ejercicio 2'
+	!
+
+!classDefinition: #Pepe category: #'Ejercicio 2' stamp: 'MMP 3/23/2025 11:07:58'!
+DenotativeObject subclass: #Pepe
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 2'!
+
+!classDefinition: 'Pepe class' category: #'Ejercicio 2' stamp: 'MMP 3/23/2025 11:07:58'!
+Pepe class
+	instanceVariableNames: ''!
+
+----SNAPSHOT----(23 March 2025 11:09:05) CuisUniversity-6350.image priorSource: 6644234!
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MMP 3/23/2025 11:11:17'!
+hola
+	! !
+!Pepe class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:12:36' prior: 50539324!
+hola
+	"hola"! !
+!Pepe class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:16:43' prior: 50539327!
+hola
+	^'hola'! !
+
+Pepe hola!
+
+ 'hola' .!
+!Pepe class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:18:11' prior: 50539331!
+hola
+	^'chau'! !
+
+Pepe hola!
+
+Pepe hola!
+
+Pepe hola!
+
+----SNAPSHOT----(23 March 2025 11:18:35) CuisUniversity-6350.image priorSource: 6645460!
+
+----SNAPSHOT----(23 March 2025 11:18:55) CuisUniversity-6350.image priorSource: 6646036!
+
+----SNAPSHOT----(23 March 2025 11:19:00) CuisUniversity-6350.image priorSource: 6646126!
+
+Pepe hola !
+
+Pepe hola !
+
+'chau' .!
+
+Pepe hola!
+
+ObjectBuilder create: #Bill asChildOf: DenotativeObject collaboratorNames: '' in: 'Ejercicio 2'!
+
+!classDefinition: #Bill category: #'Ejercicio 2' stamp: 'MMP 3/23/2025 11:26:50'!
+DenotativeObject subclass: #Bill
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 2'!
+
+!classDefinition: 'Bill class' category: #'Ejercicio 2' stamp: 'MMP 3/23/2025 11:26:50'!
+Bill class
+	instanceVariableNames: ''!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:32:18'!
+comer: unaCantidadDeKilosDeCerebro
+	! !
+
+Bill
+	collaboratorNames: 'energia'
+	in: 'EjerciciosClase1'!
+
+!classDefinition: 'Bill class' category: 'EjerciciosClase1' stamp: 'MMP 3/23/2025 11:38:39'!
+Bill class
+	instanceVariableNames: 'energia'!
+
+!classDefinition: #Bill category: 'EjerciciosClase1' stamp: 'MMP 3/23/2025 11:38:39'!
+DenotativeObject subclass: #Bill
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'EjerciciosClase1'!
+
+!classDefinition: 'Bill class' category: 'EjerciciosClase1' stamp: 'MMP 3/23/2025 11:38:39'!
+Bill class
+	instanceVariableNames: 'energia'!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:40:04' prior: 50539363!
+comer: unaCantidadDeKilosDeCerebro
+	energia:=unaCantidadDeKilosDeCerebro+energia! !
+
+Bill comer: 2!
+
+Bill comer: 2!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:43:13'!
+energia
+	^energia! !
+
+Bill energia!
+
+Bill energia!
+
+----SNAPSHOT----(23 March 2025 11:44:09) CuisUniversity-6350.image priorSource: 6646216!
+
+Bill comer:2!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:45:07' prior: 50539385!
+comer: unaCantidadDeKilosDeCerebro
+	energia:=unaCantidadDeKilosDeCerebro+energia
+	energia! !
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:45:22' prior: 50539399!
+comer: unaCantidadDeKilosDeCerebro
+	energia:=unaCantidadDeKilosDeCerebro+energia
+	^energia! !
+
+Bill comer:2!
+
+Bill energia!
+
+Bill energia!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:46:56' prior: 50539405!
+comer: unaCantidadDeKilosDeCerebro
+	energia:=unaCantidadDeKilosDeCerebro+energia
+	^energia! !
+
+Bill comer:2!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:48:47' prior: 50539412!
+comer: unaCantidadDeKilosDeCerebro
+	energia:=unaCantidadDeKilosDeCerebro*4+energia! !
+
+Bill comer:1!
+
+Bill comer:2!
+
+Bill comer:2!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 11:50:12' prior: 50539419!
+comer: unaCantidadDeKilosDeCerebro
+	energia:=unaCantidadDeKilosDeCerebro*4+energia.
+	 ^energia! !
+
+Bill comer:2!
+
+----SNAPSHOT----(23 March 2025 11:51:06) CuisUniversity-6350.image priorSource: 6647826!
+!Bill class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 12:00:08'!
+caminar:  unaCantidadDeKilometros
+	energia:= energia-unaCantidadDeKilometros-3.
+	^energia! !
+
+Bill caminar:2!
+
+Bill caminar:2!
+
+----SNAPSHOT----(23 March 2025 12:00:40) CuisUniversity-6350.image priorSource: 6649008!
+
+ObjectBuilder create: #tests asChildOf: DenotativeObject collaboratorNames: '' in: 'EjerciciosClase1'!
+
+!classDefinition: #tests category: 'EjerciciosClase1' stamp: 'MMP 3/23/2025 12:27:11'!
+DenotativeObject subclass: #tests
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'EjerciciosClase1'!
+
+!classDefinition: 'tests class' category: 'EjerciciosClase1' stamp: 'MMP 3/23/2025 12:27:11'!
+tests class
+	instanceVariableNames: ''!
+
+!classDefinition: #Verdadero category: 'EjerciciosClase1' stamp: 'MMP 3/23/2025 12:29:09'!
+DenotativeObject subclass: #Verdadero
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'EjerciciosClase1'!
+
+!classDefinition: #Falso category: 'EjerciciosClase1' stamp: 'MMP 3/23/2025 12:29:24'!
+DenotativeObject subclass: #Falso
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'EjerciciosClase1'!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 12:28:58'!
+testVerdaderoNegadoEsFalso
+	Assert that: Verdadero no isEqualTo: Falso! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:29:53'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:29:53'!
+ERROR!
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:30:14'!
+no
+	self shouldBeImplemented.! !
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:30:51' prior: 50539478!
+no
+	^Falso! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:30:55'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:31:02'!
+PASSED!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 12:36:01'!
+testFalsoNegadoEsVerdadero
+	Assert that: Falso no isEqualTo: Verdadero! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:36:09'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:36:09'!
+ERROR!
+!Falso class methodsFor: 'as yet unclassified' stamp: 'MMP 3/23/2025 12:36:38'!
+no
+	self shouldBeImplemented.! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:36:54'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:36:54'!
+ERROR!
+!Falso class methodsFor: 'as yet unclassified' stamp: 'MMP 3/23/2025 12:40:00' prior: 50539491!
+no
+	^Verdadero! !
+
+----SNAPSHOT----(23 March 2025 12:41:55) CuisUniversity-6350.image priorSource: 6649310!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 12:45:03'!
+testVerdaderoYFalso
+	Assert that: Verdadero y: Falso isEqualTo: Falso! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:45:24'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:45:24'!
+ERROR!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 12:47:34' prior: 50539502!
+testVerdaderoYFalso
+	Assert that: (Verdadero y: Falso) isEqualTo: Falso! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:47:40'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:47:40'!
+ERROR!
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:47:44'!
+y: Falso 
+	self shouldBeImplemented.! !
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:50:41' prior: 50539512!
+y: unBooleano 
+	^unBooleano! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:50:50'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:50:55'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:54:51'!
+PASSED!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 12:55:31'!
+testFalsoYVerdadero
+	Assert that: (Falso y: Verdadero) isEqualTo: Falso! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:55:36'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:55:36'!
+ERROR!
+!Falso class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:55:38'!
+y: Verdadero 
+	self shouldBeImplemented.! !
+!Falso class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:55:49' prior: 50539526!
+y: Verdadero 
+	^Falso! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:55:56'!
+PASSED!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 12:56:35'!
+testVerdaderoOFalso
+	Assert that: (Verdadero o: Falso) isEqualTo: Verdadero! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:56:41'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:56:41'!
+ERROR!
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:56:44'!
+o: Falso 
+	self shouldBeImplemented.! !
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 12:57:09' prior: 50539540!
+o: UnBooleano 
+	^Verdadero! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:57:13'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 12:57:21'!
+PASSED!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 18:04:22'!
+testFalsoOVerdadero
+	Assert that: (Falso y: Verdadero) isEqualTo: Verdadero! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:04:28'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:04:38'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:04:45'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:04:45'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:05:05'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:05:05'!
+ERROR!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/23/2025 18:05:20' prior: 50539549!
+testFalsoOVerdadero
+	Assert that: (Falso o: Verdadero) isEqualTo: Verdadero! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:05:24'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:05:24'!
+ERROR!
+!Falso class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 18:05:27'!
+o: Verdadero 
+	self shouldBeImplemented.! !
+!Falso class methodsFor: 'operadores logicos' stamp: 'MMP 3/23/2025 18:06:01' prior: 50539560!
+o: unBooleano
+	^unBooleano 
+	! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:06:02'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/23/2025 18:06:06'!
+PASSED!
+
+----SNAPSHOT----(23 March 2025 18:08:00) CuisUniversity-6350.image priorSource: 6651153!
+
+----STARTUP---- (24 March 2025 02:25:14) as C:\Users\admin\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.image!
+
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/24/2025 02:28:21'!
+testSiVerdadero
+	Assert that: (Verdadero siVerdadero:(5+5)) isEqualTo: 10! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:28:52'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:28:52'!
+ERROR!
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/24/2025 02:28:55'!
+siVerdadero: aRenameMe1 
+	self shouldBeImplemented.! !
+!Verdadero class methodsFor: 'operadores logicos' stamp: 'MMP 3/24/2025 02:31:01' prior: 50539580!
+siVerdadero: unaAccionARealizarUIgnorar
+	unaAccionARealizarUIgnorar
+	! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:31:05'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:31:10'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:31:10'!
+ERROR!
+!Verdadero class methodsFor: '-- all --' stamp: 'MMP 3/24/2025 02:31:57' prior: 50539585!
+siVerdadero: unaAccionARealizarUIgnorar
+	^unaAccionARealizarUIgnorar
+	! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:32:09'!
+PASSED!
+!tests class methodsFor: '-- all --' stamp: 'MMP 3/24/2025 02:34:54'!
+testSiFalso
+	Assert that:(Falso siFalso:(5+5))isNotEqualTo:10 ! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:34:59'!
+ERROR!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:34:59'!
+ERROR!
+!Falso class methodsFor: 'operadores logicos' stamp: 'MMP 3/24/2025 02:35:01'!
+siFalso: aRenameMe1 
+	self shouldBeImplemented.! !
+!Falso class methodsFor: 'operadores logicos' stamp: 'MMP 3/24/2025 02:35:47' prior: 50539601!
+siFalso: unaAccionAIgnorar	
+	^unaAccionAIgnorar-1! !
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:35:52'!
+PASSED!
+
+!testRun: #DenotativeObjectTestCase #performRealTest stamp: 'MMP 3/24/2025 02:35:54'!
+PASSED!
+
+----SNAPSHOT----(24 March 2025 02:36:05) CuisUniversity-6350.image priorSource: 6653376!
