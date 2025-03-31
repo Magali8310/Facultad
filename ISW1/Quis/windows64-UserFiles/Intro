@@ -1,0 +1,27 @@
+CuisUniversity, YO CAMBIE ESTO
+
+Este es un ambiente creado especialmente para la enseñanza de la Programación Orientada a Objetos, usando Smalltalk como herramienta y en particular la implementación Argentina de Smalltalk denominada Cuis.
+
+El objetivo es que los interesados empiecen aprendiendo qué significa trabajar con objetos concretos (denotative objects) para luego pasar a implementaciones más complejas del paradigma.
+
+Para trabajar con objetos concretos, solo basta elegir la opcion "DenotativeObject Browser" del menú principal.
+Para videos que muestran cómo usar CuisUniversity ir a: https://www.youtube.com/playlist?list=PLMkq_h36PcLCQiU5gxNmedxdXbl10JYeV
+
+Este ambiente viene con los siguientes paquetes instalados:
+- LiveTyping: Una VM especial con un ambiente de objetos extendido que anota los tipos de las variables
+  a medida que el sistema ejecuta. Mejora muchisimo la experiencia del programador.
+- DenotativeObject: Herramienta que permite trabajar con Objetos sin Clases.
+- Refactoring: Implementacion de refactorings automatizados para Cuis.
+- Aconcagua: Posibilita trabajar con medidas 
+- Chalten: Implementación del Calendario Gregoriano. Usa Aconcagua
+- Themes: Package que permite seleccionar distintos temas (colores), como Dark. Ir a "Preferences -> Themes"
+  (Usar preferentemente DenotativeObjectTheme y DenotativeObjectDarkTheme)
+
+Implementadores:
+- Hernán Wilkinson, Máximo Prieto, Juan Manuel Vuletich
+
+Colaboradores
+- Nahuel Garbezza, Gastón Caruso, Angeles Tella Arena, Matias Melendi
+
+Sponsors:
+- 10Pines SRL: Este ambiente no sería posible sin la horas de trabajo cedidas por 10Pines para hacerlo.

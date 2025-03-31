@@ -1,0 +1,11 @@
+abrir cmd
+
+- cd quis/windows64
+- run
+
+…
+
+Cosas útiles de QUIS
+
+1. Collaborator names es donde declaro mis variables para ese objeto
+2. Test driven development -> Acá voy a créate y después a proceed
