@@ -1,0 +1,4 @@
+| palabra vocales|
+vocales:='aeiou'.
+palabra:= 'abhgdjhgau'.
+^palabra select: [ :letra | (vocales identityIncludes: letra)].  'aau' .
