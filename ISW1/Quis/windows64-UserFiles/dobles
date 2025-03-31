@@ -1,0 +1,5 @@
+| elements doubles |
+elements:= #(1 2 5 6 9).
+doubles:= OrderedCollection new.
+elements do: [ :each | doubles add: (each*2)].
+^doubles

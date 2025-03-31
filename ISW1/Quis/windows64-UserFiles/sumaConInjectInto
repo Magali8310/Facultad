@@ -1,0 +1,5 @@
+| elements |
+elements:= #(1 2 5 6 9).
+^elements inject: 0 into: [:subTotal :next | subTotal + next].
+
+ 23 .

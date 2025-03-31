@@ -1,0 +1,5 @@
+| elements |
+elements:= #(1 2 5 6 9).
+^elements  collect: [ :each | (each*2)].
+
+ 

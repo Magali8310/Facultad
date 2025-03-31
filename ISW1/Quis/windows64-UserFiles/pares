@@ -1,0 +1,3 @@
+| elements |
+elements:= #(1 5 9).
+^elements detect: [ :each | (each even)] ifNone: [self error:'No hay pares']
