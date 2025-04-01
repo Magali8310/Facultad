@@ -1,0 +1,8 @@
+kelvin := BaseUnit nameForOne: 'Kelvin' nameForMany: 'Kelvin' sign:$K.
+
+
+celsius := NotProportionalDerivedUnit baseUnit: kelvin conversionBlock: [:kelvin | kelvin + (5463/20)] reciprocalConversionBlock: [:celsius | celsius - (5463/20)] nameForOne: 'Celsius' nameForMany: 'Celsius' sign: $C.
+
+fahrenheit := NotProportionalDerivedUnit baseUnit: kelvin conversionBlock: [:kelvin | (kelvin - 32) * (5/9)  +  (27315/100)] reciprocalConversionBlock: [:fahrenheit | (fahrenheit - (27315/100)) * 9/5 + 32] nameForOne: 'Fahrenheits' nameForMany: 'Fahrenheit' sign: $F.
+
+(30 * kelvin) + (20 * celsius) + (10 * fahrenheit) 52567/90 * Kelvin .

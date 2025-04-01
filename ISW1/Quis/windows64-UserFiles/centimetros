@@ -1,0 +1,11 @@
+ 
+
+peso := BaseUnit nameForOne: 'peso' nameForMany: 'pesos' sign: $$.
+
+metros := BaseUnit nameForOne: 'metro' nameForMany: 'metros' sign: $m.
+
+centimetros := ProportionalDerivedUnit baseUnit: metro conversionFactor: (1/100) nameForOne: 'centimetro' nameForMany: 'centimetros' sign: $c.  
+
+
+(10 * metros) + (500 * centimetros)
+ 15 * metros .

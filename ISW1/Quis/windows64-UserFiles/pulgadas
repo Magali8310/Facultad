@@ -1,0 +1,5 @@
+metros := BaseUnit nameForOne: 'metro' nameForMany: 'metros'.
+diezMetros := 10 * metros.
+pulgadas := ProportionalDerivedUnit baseUnit: metros conversionFactor: (254/10000) nameForOne: 'pulgada' nameForMany: 'pulgadas' sign: $i.
+sesentaPulgadas := 60 * pulgadas.
+diezMetros + sesentaPulgadas
