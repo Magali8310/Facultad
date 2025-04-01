@@ -1,0 +1,9 @@
+Mis conclusiones de este paper:
+
+Este paper hable sobre lo que es el buen diseño en las cosas cotidianas. Hace mención de tres principios: visibilidad, señalización apropiada y respuesta rápida (en inglés: visibility, appropiate clues and feedback).
+
+Visibilidad: solo las partes correctas deben ser visibles, es decir debo mostrar las cosas que sean necesarias y ocultar lo demás. Dar información de más al usuario puede confundirlo y ocultar las partes importantes puede resultar en situaciones como cuenta el autor en el ejemplo de la puerta (las bisagras estaban ocultas y no se entendía donde se debía aplicar la fuerza para abrir la puerta).
+
+Señalización apropiada: los botones (y todos los métodos para interactuar) deben ser apropiados, un forma de entenderlos es que deben ser intuitivos. El autor ejemplifica un diseño poco intuitivo con el caso del proyector con único botón y el diseño intuitivo con el auto, el volante por ejemplo. No se debería requerir instrucciones casi, debería ser intuitivo. 
+
+Concepto de affordances: propiedades percibidas y reales de una cosa que determinan como esa misma cosa podría ser usada. Hay que aprovechar las affordances.
