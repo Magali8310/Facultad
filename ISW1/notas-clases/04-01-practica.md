@@ -4,12 +4,13 @@
 Concepto de Class/Clase: Son ideas, por ejemplo Bill y Bob son instancias que responden a la idea de "Zombie". Zombie es la clase, Bill y Bob son instancias de la clase. Instanciar un objeto de una clase equivale a "materializar una idea". (esto dijo que no nos preocupemos mucho, que la práctica va más adelantada que la teórica, y que ya lo va a explicar bien Hernán)
 
 ## Eliminación de código repetido
-Se generaliza a los siguientes pasos: \\
+Se generaliza a los siguientes pasos: 
+
 0) Identificar que parte del código se repite (esto no es mecánico ni trivial).
 1) Copiar lo repetido a una nueva abstracción (llámese método).
 2) Parametrizar lo que cambia entre las distintas repeticioens.
 3) Nombrar la nueva abstracción (esto no es mecánico ni trivial, y es el paso más importante según la cátedra).
-4) Reemplazar el código repetido por la nueva abstracción. \\
+4) Reemplazar el código repetido por la nueva abstracción. 
 
 Hacer todo esto además de eliminar código repetido, aporta legilibilidad al código (siempre y cuando los nombres de las abstracciones sean buenos). 
 
