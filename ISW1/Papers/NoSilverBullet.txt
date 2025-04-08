@@ -1,0 +1,35 @@
+El software es una entidad compleja que es la combinación de muchas partes. Por eso, los errores conceptuales son muchos más relevantes y frecuentes que los errores de sintaxis. También, por eso la complejidad es una parte esencial del software, no una parte accidental, la complejidad es parte de su esencia y no es posible abstraerse de ello. 
+
+Los problemas tienen que ver con su complejidad y su crecimiento no lineal con respecto a su tamaño. Gran parte de la complejidad viene de estar conformado por otras interfaces complejas, no se puede rediseñar con facilidad.
+
+
+El software esta sujeto al cambio más que otras estructuras pues representa una funciono y a diferencia de algo físico, generalmente no es tan costos de modificar.
+
+El software es difícil de representar en un espacio. Se puede usar grafos para representar el flujo de los datos, las relaciones entres estructuras, etc. Pero es difícil representar una jerarquía entre estos gráficos y conseguir algo completo.
+
+Soluciones a la complejidad accidental (porque de la otra no zafamos):
+
+Lenguajes de alto nivel: libera al programa de mucha complejidad accidental, elimina la complejidad de tener que lidiar con el bajo nivel.
+
+Time sharing: Inmediato, permite obtener resultados en el momento y así evitar la dificultad de tener que interrumpir el flujo de trabajo para la compilación y la ejecución.
+
+Unified programming environments: Ataque la dificultad accidental de usar varios programas juntos, previendo una forma sencilla de integrar bibliotecas y otras cosas.
+
+Ada: ???
+
+Programación Orientada a Objetos: Permite al diseñador enfocarse en la esencia de su diseño sin tener que enfocarse en material que no aporta nada al diseño.
+
+AI & Experts system: herramientas que estarán a disposición para consultar sobre todo por el programador inexperto. 
+
+Program verification: Elimina errores sintácticos y puede chequear que el programa cumpla una especificación.
+
+Environments and tools: Mejora la capacidad de visualizar mucha información a la vez (muchos archivos, bases de datos, y ayudar a mantener a los equipos informados)
+
+Comprar software ya hecho: más fácil de mantener y en muchos casos mejor diseñado. El problema es que ese software se ajuste a mi proceso, o tener yo que ajustar mi proceso a ese software
+
+Prototipos e incremental development: que el cliente pueda testear antes de que el producto este terminado para ver si cumple con lo que el espera. Armo mi software de a partes.
+
+Buenos diseñadores: la mejor supuestamente.
+
+
+

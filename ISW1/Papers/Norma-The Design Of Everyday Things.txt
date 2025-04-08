@@ -7,3 +7,11 @@ Visibilidad: solo las partes correctas deben ser visibles, es decir debo mostrar
 Señalización apropiada: los botones (y todos los métodos para interactuar) deben ser apropiados, un forma de entenderlos es que deben ser intuitivos. El autor ejemplifica un diseño poco intuitivo con el caso del proyector con único botón y el diseño intuitivo con el auto, el volante por ejemplo. No se debería requerir instrucciones casi, debería ser intuitivo. 
 
 Concepto de affordances: propiedades percibidas y reales de una cosa que determinan como esa misma cosa podría ser usada. Hay que aprovechar las affordances.
+
+Modelo conceptual: El diseñador tiene uno, el usurio tiene otro que construye a partir de su uso del el objeto. El usuario y el diseñador no intertuan directamente lo hacen atraves de la imagen del sistema (que es todo la estructura física pertinente al sistema incluida la documentación y las etiquetas correspondientes).
+
+Mapeo: La relación de dos cosas, el control de algo y los movimientos que se producen en respuesta por ejemplo.
+
+Feedback: Es necesario recibir respuesta cuanto antes al ejecutar una acción para saber si esta fue efectiva, es decir que resultados tuvo la acción.
+
+La paradoja de la tecnología: Provee más funciones, en cuanto estas exceden la cantidad de controles existentes el diseño se vuelve muy complicado y antinatural. Los principios del buen diseño se vuelven muy importantes para manejar esta creciente complejidad. 
