@@ -1,0 +1,14 @@
+2025-03-30T10:13:44.300 process:78 2558732 Incorrect changes file: C:\Users\magal\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.changes
+2025-03-30T10:24:16.801 process:40 548496 Editor shortcut: $e already taken for: methodSourceContainingIt:. Override request for: acceptSendAndInspect:  ignored
+2025-03-30T10:25:05.736 process:79 407764 
+2025-03-30T10:25:36.811 process:79 141788 
+2025-03-30T10:26:34.669 process:79 2048508 
+2025-03-30T10:27:07.910 process:79 2047200 
+2025-03-30T10:27:08.745 process:39 1527930 Could not find changes file: C:\Users\magal\Facultad\ISW1\Quis\windows64\CuisUniversity-63501.changes
+2025-03-30T10:28:27.167 process:79 2816002 
+2025-03-30T10:28:52.087 process:78 2558732 Incorrect changes file: C:\Users\magal\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.changes
+2025-03-30T10:29:16.280 process:79 4151886 
+2025-04-24T19:50:14.608 process:78 2558732 Incorrect changes file: C:\Users\magal\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.changes
+2025-04-24T19:55:08.332 process:40 2992484 Undeclared: a Dictionary(#tddState->nil )
+2025-04-24T19:55:44.141 process:40 1187926 Will run: PenalesTest>>#test01DelanteroNoPuedeApuntarHaciaAfueraDelPaloIzquierdo
+2025-04-24T20:04:34.638 process:78 2558732 Incorrect changes file: C:\Users\magal\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.changes
