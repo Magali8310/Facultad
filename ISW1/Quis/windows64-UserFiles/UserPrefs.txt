@@ -1,2 +1,2 @@
 focusFollowsMouse=true
-defaultFontSize=28
+defaultFontSize=12
