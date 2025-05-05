@@ -1,7 +1,7 @@
 # Notas de Polymorphic Hierarchy - Woolf 1996
 
 ### Template Class
-La clase más alta en una jerarquía polimorfica.
+La clase más alta en una jerarquía polimórfica.
 
 
 ## Descripciones de métodos
@@ -15,8 +15,8 @@ See superimplementor. Esta descripción significa que semánticamente un método
 
 
 ## Polimorfismo
-No tiene sentido tratar de entender una clase sin primero entender sus superclase. Al crear una subclase se debe pensar en como debe diferir de su superclase. <br>
-Una superclase normalmente define QUE se debe hacer, y las subclases definen COMO.<br>
+No tiene sentido tratar de entender una clase sin primero entender sus superclases. Al crear una subclase se debe pensar en como debe diferir de su superclase. <br>
+Una superclase normalmente define QUÉ se debe hacer, y las subclases definen CÓMO.<br>
 Cuando todos los *implementors* en una jerarquía tienen el mismo propósito, son polimórficos. Cuando todos las métodos que las sublcases subimplementan son polimórficos con sus versiones heredas, la jerarquía es polimórfica.
 
 
@@ -24,7 +24,7 @@ Cuando todos los *implementors* en una jerarquía tienen el mismo propósito, so
 En el caso que dos métodos tengan el mismo propósito:
 - Si uno está subimplementando otro, su descripción es "See superimplementor"
 - Si son clases "hermanas", se agrega un superiplmenetor con comportamiento default.
-- Si no tienen relación, hay que crear una jerarquía con una clase abstracta que sea padre de ambas clases. Esta clase se llama **Template Class* y el método creado es un **Template Method**.
+- Si no tienen relación, hay que crear una jerarquía con una clase abstracta que sea padre de ambas clases. Esta clase se llama **Template Class* y el método creado es un **Template Method**. Esto no está aprobado por la cátedra.
 
 ### Métodos polimórficos
 Para serlo se tiene que cumplir que tengan:

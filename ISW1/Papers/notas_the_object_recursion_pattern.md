@@ -4,12 +4,12 @@
 Desarmar una solicitud sobre una estructura, en partes más pequeñas y fáciles de manejar, mediante la delegación polimórfica.
 
 
-## Motivacion
+## Motivación
 Clase "comparadora" de objetos:
-- Tiene un método que compara dos objetos arbitrarios. Cualquier cambio en una clase requiere modificarlo la clase comparadora.
+- Tiene un método que compara dos objetos arbitrarios. Cualquier cambio en una clase requiere modificar la clase comparadora.
 - Tiene un método que les dice a los objetos QUE hacer, no COMO, o sea les dice compárense y estos realizan la tarea según su propia implmentación.
 
-Cuando se compara un objetos complejo, este envia mensajes de comparacion a los objetos más simples que lo componen, y así recursivamente. Esto es un ejemplo de Object Revusion.
+Cuando se compara un objetos complejo, este envia mensajes de comparación a los objetos más simples que lo componen, y así recursivamente. Esto es un ejemplo de Object Recursion.
 
 
 ## Estructura
@@ -26,8 +26,10 @@ Un sistema con O.R. debe tener:
 ## Participantes
 - Initiator: inicializa la request enviando msg al handler
 - Handler: define que tipo de datos puede resolver una request. Puede ser:
-  - Recurser: Define un succesor, maneja requests delegandolas, puede ejecutar algo antes y/o después de la delegación
+  - Recurser: Define un succesor, maneja requests delegándolas, puede ejecutar algo antes y/o después de la delegación
   - Terminator: Finaliza una request al handlearle sin recursión
+
+![](assets/object_recursion_structure.png)
 
 ## Ventajas
 - Procesamiento distribuido.
@@ -37,3 +39,18 @@ Un sistema con O.R. debe tener:
 ## Desventajas
 Sistemas más complejos y difíciles de mantener.
 
+
+
+
+## NOTAS DE LA CLASE
+motivacion del autor: implemetar el "=" de isEqual..
+problema: si tengo un obj comparador, cada vez q cambia algo por ej atributo ==> hay q cambiarlo ==> no escala
+idea: encararlo OO. 
+- cliente: manda el req obj == *otro*
+- obj recursivo: le manda msg a todos los objetos q lo componen. delega la ejec del =, les dice a sus vars comparanse entre usds
+- obj terminal: no delega, resuelve si es igual a *otro* o no
+
+casos de uso: 
+- ==
+- print/toString
+- clone/copy

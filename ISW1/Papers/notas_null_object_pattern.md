@@ -4,7 +4,7 @@
 Proponer un reemplazo a tener que creer objetos que tengan una determinada interfaz pero que no hagan nada. Este es el Null Object.
 
 ## Ejemplo MVC
-La View usa su Controller para obtener input. Si la vista no requiere input, no requiere controller. La clase View lo requiere , pero la instancia particular no. Una solución propuesta es que el colaborador controller de la vista sea Nil, pero al enviarle un mensaje va a haber error. Otra opción es que el Controller tenga modo *read* y modo *edit*, pero es innecesario si siempre va a ser alguna de las dos sin switchear nunca. Finalmente se propone crear una subclase de Controller, el NoController que tiene la misma interfaz de Controller, pero enviarle al enviarle cualquier mensaje no hace nada. NoController es un ejemplo de Null Object Pattern.
+La View usa su Controller para obtener input. Si la vista no requiere input, no requiere controller. La clase View lo requiere, pero la instancia particular no. Una solución propuesta es que el colaborador controller de la vista sea Nil, pero al enviarle un mensaje va a haber error. Otra opción es que el Controller tenga modo *read* y modo *edit*, pero es innecesario si siempre va a ser alguna de las dos sin switchear nunca. Finalmente se propone crear una subclase de Controller, el NoController que tiene la misma interfaz de Controller, pero enviarle al enviarle cualquier mensaje no hace nada. NoController es un ejemplo de Null Object Pattern.
 
 ## Usos
 - Cuando se requiere estrictamente un colaborador, no se agrega uno para que sea null.
@@ -20,9 +20,9 @@ En caso de haber más de una forma de "hacer nada", puede haber más de un Null 
 
 ## Consecuencias
 - Nuevas estructuras jerárquicas.
-- Simplifica el código del "cliente" (clases que pueden tinen Real/Null object como colaborador). Ambos tipos se tratan uniformemente.
+- Simplifica el código del "cliente" (clases que  tienen Real/Null object como colaborador). Ambos tipos se tratan uniformemente.
 - Se pueden programar el Null Object para hacer nada "eficientemente", es decir no caer en calcular algo para no usarlo por ejemplo.
-- Retuilizable
+- Reutilizable
 - Puede requerir crear un NullObject por cada AbstractObject class.
 
 ## Implementación
