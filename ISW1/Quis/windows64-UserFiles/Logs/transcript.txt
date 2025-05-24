@@ -12,3 +12,4 @@
 2025-04-24T19:55:08.332 process:40 2992484 Undeclared: a Dictionary(#tddState->nil )
 2025-04-24T19:55:44.141 process:40 1187926 Will run: PenalesTest>>#test01DelanteroNoPuedeApuntarHaciaAfueraDelPaloIzquierdo
 2025-04-24T20:04:34.638 process:78 2558732 Incorrect changes file: C:\Users\magal\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.changes
+2025-04-29T17:23:29.844 process:78 2000705 Could not write to changes file: C:\Users\magal\Facultad\ISW1\Quis\windows64\CuisUniversity-6350.changes
