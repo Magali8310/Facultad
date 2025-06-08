@@ -3,7 +3,7 @@
 ### Equivalencia
 Cuando dos autómatas definen el mismo lenguaje, son equivalentes. Dado un AFD, hay un único AFD mínimo equivalente, o sea con la menor cantidad de estados posibles.
 
-## 4.4.1 - Testeado equivalencia de estados
+## 4.4.1 - Testeando equivalencia de estados
 Dos estados $p$ y $q$ son **equivalentes**, si para toda cadena $w$ sucede que:
 - $\hat{\delta}(p,w)$ acepta $\iff \hat{\delta}(q,w)$ acepta
 
