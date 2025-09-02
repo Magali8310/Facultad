@@ -1,5 +1,5 @@
 import pulp
-
+import sys
 #############################################################################
 
 def read_input(file):
@@ -41,55 +41,62 @@ def read_input(file):
     return n, m, S, capacities, costs, coverage
 
 #####################################################################
+def main():
+  if len(sys.argv) != 3:
+        print("Formato de llamada incorrecto")
+        sys.exit(1)
+  
+  input_path = sys.argv[1]
+  output_path = sys.argv[2]
+  
+  solutions = []
+  
+  with open(input_path, 'r') as input_file:
+    while True:
+      # Leo input
+      n, m, S, capacities, costs, coverage = read_input(input_file)
 
-file_path = "in.txt"
-input_file = open(file_path, 'r')
-solutions = []
+      if n == 0:
+        break
 
-while True:
-  # Read input data
-  n, m, S, capacities, costs, coverage = read_input(input_file)
+      # Considero al SVC el nodo n+1 con costo S, capacidad m (PODRIA SER MAYOR) y coverage de todos los paquetes
+      costs.append(S)
+      capacities.append(m)
+      coverage[n] = list(range(m))
+      n = n + 1
 
-  if n == 0:
-    break
+      model = pulp.LpProblem("Delivery_Cost_Optimization", pulp.LpMinimize)
 
-  # Considero al SVC el nodo n+1 con costo S, capacidad m (PODRIA SER MAYOR) y coverage de todos los paquetes
-  costs.append(S)
-  capacities.append(m)
-  coverage[n] = list(range(m))
-  n = n + 1
+      # Defino las variables, cada variable representa entrage el paquete j en el nodo i. Solo si es posible.
+      deliver = pulp.LpVariable.dicts("Deliver_Package_In_Node",[(j, i) for i in range(n) for j in coverage[i]], cat='Binary')
 
-  model = pulp.LpProblem("Delivery_Cost_Optimization", pulp.LpMinimize)
+      #Quiero minimzar el costo de entregar los paquetes, para eso tengo que elegir donde los entrego
+      model += pulp.lpSum(deliver[(j, i)] * costs[i] for i in range(n) for j in coverage[i]), "Total_Cost"
 
-  # Defino las variables, cada variable representa entrage el paquete j en el nodo i. Solo si es posible.
-  deliver = pulp.LpVariable.dicts("Deliver_Package_In_Node",[(j, i) for i in range(n) for j in coverage[i]], cat='Binary')
+      #Cada nodo no puede entrgar más paquetes que su capacidad
+      for i in range(n):
+          model += pulp.lpSum(deliver[(j, i)] for j in coverage[i]) <= capacities[i], f"Capacity_{i}"
 
-  #Quiero minimzar el costo de entregar los paquetes, para eso tengo que elegir donde los entrego
-  model += pulp.lpSum(deliver[(j, i)] * costs[i] for i in range(n) for j in coverage[i]), "Total_Cost"
-
-  #Cada nodo no puede entrgar más paquetes que su capacidad
-  for i in range(n):
-      model += pulp.lpSum(deliver[(j, i)] for j in coverage[i]) <= capacities[i], f"Capacity_{i}"
-
-  #Cada paquete j tiene que ser entrgado a un único nodo
-  for j in range(m):
-      #Ese nodo tiene que poder entrgarlo
-      model += pulp.lpSum(deliver[(j, i)] for i in range(n) if j in coverage[i]) == 1, f"Package_{j}"
-
-
-  # Resuelvo
-  model.solve()
-  solutions.append((model, deliver, n, m, coverage))
-
-################################################################################
-input_file.close()
-with open("out.txt", "w") as f:
-  for instance_index, (model, deliver, n, m, coverage) in enumerate(solutions, start=1):
-      f.write(f"Caso {instance_index}\n")
-      f.write(f"{pulp.value(model.objective):.2f}\n")
+      #Cada paquete j tiene que ser entrgado a un único nodo
       for j in range(m):
-        for i in range(n):
-          if j in coverage[i] and pulp.value(deliver[(j, i)]) == 1:
-            r = i if i != n-1 else -1
-            f.write(f"{j} {r}\n")
-            break
+          #Ese nodo tiene que poder entrgarlo
+          model += pulp.lpSum(deliver[(j, i)] for i in range(n) if j in coverage[i]) == 1, f"Package_{j}"
+
+
+      # Resuelvo
+      model.solve()
+      solutions.append((model, deliver, n, m, coverage))
+  #Escribo el output
+  with open(output_path, "w") as f:
+    for instance_index, (model, deliver, n, m, coverage) in enumerate(solutions, start=1):
+        f.write(f"Caso {instance_index}\n")
+        f.write(f"{pulp.value(model.objective):.2f}\n")
+        for j in range(m):
+          for i in range(n):
+            if j in coverage[i] and pulp.value(deliver[(j, i)]) == 1:
+              r = i if i != n-1 else -1
+              f.write(f"{j} {r}\n")
+              break
+
+
+main()
