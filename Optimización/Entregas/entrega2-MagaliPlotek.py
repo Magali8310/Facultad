@@ -229,7 +229,7 @@ def main():
             model, deliver = optimize_asignation_cost(n, m, S, capacities, costs, coverage)
             asignacion = get_package_asignation(n, m, coverage, deliver)
 
-            total_vehicles_used = 0
+            total_routes = 0
             routes_information = []
             for node_id in range(-1, n):
                 data = get_data_for_node(node_id, asignacion, cordinates_nodes, cordinates_packages, v_capacity, n)
@@ -239,9 +239,9 @@ def main():
                 routes_assignment, routing_model, manager = solve_CVRP(data)
                 routes = get_routes(routes_assignment, routing_model, manager, data)
                 routes_information.append((routes_assignment, routing_model, manager, data, routes, node_id))
-                total_vehicles_used += len(routes)
+                total_routes += 1
 
-            write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_vehicles_used, routes_information)
+            write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_routes, routes_information)
 
 
 main()
