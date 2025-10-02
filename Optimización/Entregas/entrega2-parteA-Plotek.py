@@ -94,7 +94,7 @@ def get_package_asignation(n, m, coverage, deliver):
     return asignacion
 
 #############################################################################
-######## Esta función prepara la data que estará utilizando el CRVP #########
+####### Esta función prepara la data que estará utilizando el solver ########
 #############################################################################
 def get_data_for_node(node_id, asignacion, cordinates_nodes, cordinates_packages, capacity, n):
     
@@ -139,8 +139,10 @@ def get_data_for_node(node_id, asignacion, cordinates_nodes, cordinates_packages
 
 #######################################################################################
 ############# Esta función resuleve el problema llamando al solver ####################
-## Me ayude fuertemente en la documentación que encontre en internet para este punto ##
 #######################################################################################
+
+#Toma el diccionario preparado más arriba
+#https://developers.google.com/optimization/routing/cvrp?hl=es-419 me ayude con esta página
 
 def solve_CVRP(data):
     manager = pywrapcp.RoutingIndexManager(len(data["distance_matrix"]), data["num_vehicles"], data["depot"])
@@ -156,13 +158,7 @@ def solve_CVRP(data):
         return data["demands"][manager.IndexToNode(from_index)]
 
     demand_callback_index = routing_model.RegisterUnaryTransitCallback(demand_callback)
-    routing_model.AddDimensionWithVehicleCapacity(
-        demand_callback_index,
-        0,
-        data["vehicle_capacities"],
-        True,
-        "Capacity"
-    )
+    routing_model.AddDimensionWithVehicleCapacity(demand_callback_index, 0, data["vehicle_capacities"], True, "Capacity")
 
     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
     search_parameters.first_solution_strategy = routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC
@@ -192,18 +188,21 @@ def get_routes(routes_assignment, routing_model, manager, data):
 ############################ Calcula costos #################################
 #############################################################################
 
+# Toma el costo de cada vehiculo, cantidad de vehiculos usados
+# El costo de cada paquete y la canitdad 
+# Y el costo de la asignación total de la asignacion total
+
 def get_total_costs(m, v_cost_fixed, v_cost_package, model, total_vehicles_used):
     return pulp.value(model.objective)+total_vehicles_used*v_cost_fixed+v_cost_package*m
-
 
 #############################################################################
 ################# Escribe el output en el archivo dado ######################
 #############################################################################
-def write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_vehicles_used, routes_information):
+def write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_vehicles_used, total_routes ,routes_information):
     output_file.write(f"Caso {case_number}\n")
     case_number += 1
     output_file.write(f"{get_total_costs(m, v_cost_fixed, v_cost_package, model, total_vehicles_used)}\n")
-    output_file.write(f"{total_vehicles_used}\n")
+    output_file.write(f"{total_routes}\n")
     for routes_assignment, routing_model, manager,data, routes, node_id in routes_information:
         output_file.write(f"{node_id} {len(routes)}\n")
         for i in range(len(routes)):
@@ -230,7 +229,9 @@ def main():
             asignacion = get_package_asignation(n, m, coverage, deliver)
 
             total_routes = 0
+            total_vehicles_used = 0
             routes_information = []
+            
             for node_id in range(-1, n):
                 data = get_data_for_node(node_id, asignacion, cordinates_nodes, cordinates_packages, v_capacity, n)
                 if data is None:
@@ -240,8 +241,10 @@ def main():
                 routes = get_routes(routes_assignment, routing_model, manager, data)
                 routes_information.append((routes_assignment, routing_model, manager, data, routes, node_id))
                 total_routes += 1
+                total_vehicles_used += len(routes)
 
-            write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_routes, routes_information)
+
+            write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_vehicles_used, total_routes, routes_information)
 
 
 main()

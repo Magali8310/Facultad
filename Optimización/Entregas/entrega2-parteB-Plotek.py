@@ -48,8 +48,12 @@ def read_input(file):
     return n, m, S, capacities, costs, coverage, v_capacity, v_cost_fixed, v_cost_package, cordinates_nodes, cordinates_packages
 
 #############################################################################
-############# Misma función que entregue en el problema 1 ###################
+###### Esta función fue modificada respecto al problema 1 y la parte A ######
 #############################################################################
+
+#Tomo una matriz de distancias en esta función
+#La matriz es (n+1) x m 
+#Tiene la distancia euclediana entre el nodo i y las cordenadas de j
 
 def optimize_asignation_cost(n, m, S, capacities, costs, coverage, distances):
     # Añado el service center como un nodo más
@@ -67,6 +71,7 @@ def optimize_asignation_cost(n, m, S, capacities, costs, coverage, distances):
         cat="Binary"
     )
 
+    #Optimizo utilizando el costo de asignar el paquete al nodo i y la distancia de i al destino j
     model += pulp.lpSum(deliver[(j, i)] * (costs[i] + distances[i][j]) for i in range(n) for j in coverage[i]), "Total_Cost"
 
     for i in range(n):
@@ -139,7 +144,6 @@ def get_data_for_node(node_id, asignacion, cordinates_nodes, cordinates_packages
 
 #######################################################################################
 ############# Esta función resuleve el problema llamando al solver ####################
-## Me ayude fuertemente en la documentación que encontre en internet para este punto ##
 #######################################################################################
 
 def solve_CVRP(data):
@@ -199,16 +203,18 @@ def get_total_costs(m, v_cost_fixed, v_cost_package, model, total_vehicles_used)
 #############################################################################
 ################# Escribe el output en el archivo dado ######################
 #############################################################################
-def write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_vehicles_used, routes_information):
+def write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_vehicles_used, total_routes, routes_information):
     output_file.write(f"Caso {case_number}\n")
     case_number += 1
     output_file.write(f"{get_total_costs(m, v_cost_fixed, v_cost_package, model, total_vehicles_used)}\n")
-    output_file.write(f"{total_vehicles_used}\n")
+    output_file.write(f"{total_routes}\n")
     for routes_assignment, routing_model, manager,data, routes, node_id in routes_information:
         output_file.write(f"{node_id} {len(routes)}\n")
         for i in range(len(routes)):
             output_file.write(" ".join(map(str, sorted(routes[i]))) + "\n")
 #############################################################################
+
+#Calcula la distancia euclediana entre cada nodo i y el destino de cada paquete j
 
 def get_distance_matrix(nodes, packages):
     n = len(nodes)
@@ -243,7 +249,9 @@ def main():
             asignacion = get_package_asignation(n, m, coverage, deliver)
 
             total_routes = 0
+            total_vehicles_used = 0
             routes_information = []
+            
             for node_id in range(-1, n):
                 data = get_data_for_node(node_id, asignacion, cordinates_nodes, cordinates_packages, v_capacity, n)
                 if data is None:
@@ -252,9 +260,10 @@ def main():
                 routes_assignment, routing_model, manager = solve_CVRP(data)
                 routes = get_routes(routes_assignment, routing_model, manager, data)
                 routes_information.append((routes_assignment, routing_model, manager, data, routes, node_id))
+                total_vehicles_used += len(routes)
                 total_routes += 1
 
-            write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_routes, routes_information)
+            write_output(output_file, case_number, m, v_cost_fixed, v_cost_package, model, total_vehicles_used, total_routes, routes_information)
 
 
 main()
