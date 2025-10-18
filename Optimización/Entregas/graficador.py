@@ -50,7 +50,7 @@ def plot_input(path):
 
     plt.xlabel("X")
     plt.ylabel("Y")
-    plt.title("Visualización del input")
+    plt.title("Ubicación")
     plt.legend()
     plt.grid(True)
     plt.show()
